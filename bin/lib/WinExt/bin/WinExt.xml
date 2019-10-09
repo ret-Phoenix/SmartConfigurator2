@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WinExt</name>
+    </assembly>
+    <members>
+        <member name="M:WinExt.ExecutableFileInfo.MainModuleInfo(System.Int32)">
+            <summary>
+            Информация об основном модуле.
+            - FileName
+            - ModuleName
+            - FileVersionInfo:
+            
+                    * FileMajorPart
+                    * FileMinorPart
+                    * FileBuildPart
+                    * FilePrivatePart
+            </summary>
+            <param name="proccessID"></param>
+            <returns>ФиксированнаяСтруктура</returns>
+        </member>
+        <member name="T:WinExt.MSSendKeys">
+            <summary>
+            Класс для отправки нажатий клавиш, основан на родном .net SendKeys.
+            </summary>
+        </member>
+        <member name="M:WinExt.MSSendKeys.OriginalSendKeys(System.String)">
+            <summary>
+            Послать нажатия клавиш. Правила: https://docs.microsoft.com/ru-ru/dotnet/api/system.windows.forms.sendkeys?view=netframework-4.7
+            </summary>
+            <param name="keys">Строка - набор клавиш</param>
+        </member>
+        <member name="T:WinExt.Mouse">
+            <summary>
+            Управление мышкой. Установить/Считать позицию. Кликнуть кнопкой.
+            </summary>
+        </member>
+        <member name="M:WinExt.Mouse.SetCursorPosition(System.Int32,System.Int32)">
+            <summary>
+            Установить позицию курсора
+            </summary>
+            <param name="posX">Позиция X</param>
+            <param name="posY">Позиция Y</param>
+            <returns>Булево - Удалось установить позицию курсора</returns>
+        </member>
+        <member name="M:WinExt.Mouse.GetCursorPosition">
+            <summary>
+            Получить позицию курсора
+            </summary>
+            <returns>Структура - Ключи: Верх, Лево</returns>
+        </member>
+        <member name="P:WinExt.ScreenManage.ImageWrapper.Width">
+            <summary>
+            Ширина изображения
+            </summary>
+        </member>
+        <member name="P:WinExt.ScreenManage.ImageWrapper.Height">
+            <summary>
+            Высота изображения
+            </summary>
+        </member>
+        <member name="P:WinExt.ScreenManage.ImageWrapper.DefaultColor">
+            <summary>
+            Цвет по-умолачнию (используется при выходе координат за пределы изображения)
+            </summary>
+        </member>
+        <member name="M:WinExt.ScreenManage.ImageWrapper.#ctor(System.Drawing.Bitmap,System.Boolean)">
+            <summary>
+            Создание обертки поверх bitmap.
+            </summary>
+            <param name="copySourceToOutput">Копирует исходное изображение в выходной буфер</param>
+        </member>
+        <member name="P:WinExt.ScreenManage.ImageWrapper.Item(System.Int32,System.Int32)">
+            <summary>
+            Возвращает пиксел из исходнго изображения.
+            Либо заносит пиксел в выходной буфер.
+            </summary>
+        </member>
+        <member name="P:WinExt.ScreenManage.ImageWrapper.Item(System.Drawing.Point)">
+            <summary>
+            Возвращает пиксел из исходнго изображения.
+            Либо заносит пиксел в выходной буфер.
+            </summary>
+        </member>
+        <member name="M:WinExt.ScreenManage.ImageWrapper.Dispose">
+            <summary>
+            Заносит в bitmap выходной буфер и снимает лок.
+            Этот метод обязателен к исполнению (либо явно, лмбо через using)
+            </summary>
+        </member>
+        <member name="M:WinExt.ScreenManage.ImageWrapper.GetEnumerator">
+            <summary>
+            Перечисление всех точек изображения
+            </summary>
+        </member>
+        <member name="M:WinExt.ScreenManage.ScreenExt.ScreenResolution(System.Int32)">
+            <summary>
+            Получить разрешение экрана
+            </summary>
+            <param name="SreenNumber">Число - Номер экрана, если ничего не задано - берет основной экран</param>
+            <returns>ФиксированнаяСтруктура (Ширина, Высота)</returns>
+        </member>
+        <member name="M:WinExt.ScreenManage.ScreenExt.MakeScreenshot(System.String,System.Int32)">
+            <summary>
+            Сделать снимкок экрана.
+            </summary>
+            <param name="fileName">Строка - имя файла снимка. Возможны расширения: jpg, png</param>
+            <param name="screenNumber">Число - Номер экрана, снимок которого надо сделать</param>
+        </member>
+        <member name="M:WinExt.ScreenManage.ScreenExt.findFragment(System.String)">
+            <summary>
+            Найти на экране фрагмент из файла
+            </summary>
+            <param name="fragmentFileName">Путь к файлу с искомым фрагментом</param>
+            <returns>ФрагментЭкрана</returns>
+        </member>
+    </members>
+</doc>

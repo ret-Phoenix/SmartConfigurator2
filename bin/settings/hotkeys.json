@@ -1,0 +1,269 @@
+[
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "D1",
+"Command": "Навигация\\НавигацияПоМодулю::СписокМетодов",
+"Id": "7371d250-73bd-45e7-84bc-97acd98d250a",
+"App": "1cv8.exe,1cedt.exe",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "D2",
+"Command": "Навигация\\НавигацияПоМодулю::СписокОбластей",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "4c6b5f40-f794-4e97-8b6b-3b3b7990b294",
+"Comment": ""
+},
+{
+"Id": "5e1382c1-06da-4225-84cb-461a104876ae",
+"Key": "N",
+"Ctrl": true,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Command": "Навигация\\НавигацияПоМодулю::ПоказатьИмяМетода",
+"App": "1cv8.exe,1cedt.exe",
+"Comment": "note..."
+},
+{
+"Ctrl": true,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Key": "S",
+"Command": "Навигация\\НавигацияПоМодулю::ПоказатьИмяСекции",
+"Id": "e5e8ba15-6f9d-4981-80ce-926fd9c9a6cf",
+"App": "1cv8.exe,1cedt.exe",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "B",
+"Command": "Навигация\\НавигацияПоМодулю::ПерейтиВНачалоМетода",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "a9183139-b758-46a2-bfa9-dc7c98f7df68",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "E",
+"Command": "Навигация\\НавигацияПоМодулю::ПерейтиВКонецМетода",
+"App": "1cv8.exe",
+"Id": "fbb41862-f5b3-4cea-9f11-c1d8a75a5fb6"
+},
+{
+"Ctrl": true,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Key": "F",
+"Command": "Навигация\\НавигацияПоМодулю::ПоискРегулярныеВыражения",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "34717ed7-2379-479e-bec2-4fd989b01d48",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Key": "W",
+"Command": "Навигация\\НавигацияПоМодулю::ВыбратьИмяМетода",
+"Id": "08559cc1-559b-4490-a6a1-c86c476a7a54",
+"App": "1cv8.exe",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "W",
+"Command": "Навигация\\НавигацияПоМодулю::ВыбратьРанееНабранноеСлово",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "39880d8e-0f34-4591-8560-25e6547e8c6f",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "D9",
+"Command": "ExtFiles::ОткрытьФайлИзБиблиотеки",
+"App": "1cv8.exe",
+"Id": "27f85e43-c1a9-437a-85a4-05b4760750e8"
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": true,
+"Key": "X",
+"Command": "ОбрамлениеКода::ОбрамлениеТекста",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "911ba068-a39a-4d96-849d-cc334add351a",
+"Comment": ""
+},
+{
+"Ctrl": false,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Key": "Down",
+"Command": "ПеремещениеСтрок::СдвинутьСтрокуВниз",
+"App": "1cv8.exe",
+"Id": "d76fcc3d-cde1-4fe3-8ca8-0b170b2e2d10"
+},
+{
+"Ctrl": false,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Key": "Up",
+"Command": "ПеремещениеСтрок::СдвинутьСтрокуВверх",
+"App": "1cv8.exe",
+"Id": "81c96272-b0b9-4f74-8088-6a3db5862e0e"
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "Oemplus",
+"Command": "Форматирование::ВыравнитьПоРавно",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "97c3b096-709e-4e63-abbd-4b3f147f4051",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "OemQuestion",
+"Command": "Форматирование::ВыравнитьПоЗапятой",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "df5b3f44-5ea2-424d-8bdc-371289e6f867",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Key": "D0",
+"Command": "Форматирование::ВыравнитьПоВведеномуСимволу",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "8f075504-2174-43da-b27a-9d1ed2829ca5",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Key": "OemSemicolon",
+"Command": "Форматирование::УбратьЛишниеПробелыСправа",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "e6c0ba3e-ef71-4914-91b1-36363ad3cb9a",
+"Comment": ""
+},
+{
+"Ctrl": false,
+"Alt": true,
+"Shift": true,
+"Win": false,
+"Key": "Left",
+"Command": "РаботаСоСловами::ПереместитьсяВлево",
+"App": "1cv8.exe",
+"Id": "3e4e4aa4-6a24-46d5-8baf-ccee088ba2ab"
+},
+{
+"Ctrl": false,
+"Alt": true,
+"Shift": true,
+"Win": false,
+"Key": "Right",
+"Command": "РаботаСоСловами::ПереместитьсяВправо",
+"App": "1cv8.exe",
+"Id": "313ef94c-4e09-4bcc-8cf2-e33575815d42"
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Key": "D7",
+"Command": "РаботаСТекстом::ВыбратьПрепроцессор",
+"App": "1cv8.exe,1cedt.exe",
+"Id": "ec1aa466-6f3f-456c-932a-3a95449e81e7",
+"Comment": ""
+},
+{
+"Ctrl": false,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Key": "Enter",
+"Command": "РаботаСТекстом::ПродолжитьСтрокуКомментарий",
+"App": "1cv8.exe",
+"Id": "01767c04-0e12-4712-9d38-b7d14faddd18"
+},
+{
+"Ctrl": false,
+"Alt": true,
+"Shift": true,
+"Win": false,
+"Key": "Oemplus",
+"Command": "РаботаСТекстом::ИнкрементПлюПлюс",
+"App": "1cv8.exe",
+"Id": "9e80debe-672b-4ce9-b4fc-e4280867819c"
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": true,
+"Key": "T",
+"Command": "РаботаСТекстом::ВыбратьШаблон",
+"App": "1cv8.exe",
+"Id": "4ea655de-abc5-4b98-b5d3-e4a64ee37368",
+"Comment": ""
+},
+{
+"Ctrl": true,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Key": "M",
+"Command": "МенеджерСкриптов::ВыполнитьСкрипт",
+"App": "1cv8.exe",
+"Id": "65f5c33d-1ce5-4815-bd5b-79e844763db6",
+"Comment": "в EDT используется для навигатора по метаданным"
+},
+{
+"Id": "fddd2b9d-4aa2-4f1e-bcca-e1d44c320843",
+"Key": "M",
+"Ctrl": false,
+"Alt": true,
+"Shift": true,
+"Win": false,
+"Command": "МенеджерСкриптов::ВыполнитьСкрипт",
+"App": "1cv8.exe,1cedt.exe",
+"Comment": ""
+}
+]

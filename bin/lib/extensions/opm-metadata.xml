@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<opm-metadata xmlns="http://oscript.io/schemas/opm-metadata/1.0">
+    <name>extensions</name>
+    <version>1.0.1</version>
+    <author>Sergey Ushakov (ret-Phoenix)</author>
+    <description>Доп. возможности для OneScript, которые по каким-либо причинам не вошли в движок.</description>
+    <engine-version>1.0.15</engine-version>
+</opm-metadata>
