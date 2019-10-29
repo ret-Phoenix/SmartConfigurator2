@@ -265,5 +265,16 @@
 "Command": "МенеджерСкриптов::ВыполнитьСкрипт",
 "App": "1cv8.exe,1cedt.exe",
 "Comment": ""
+},
+{
+"Id": "32c58d04-32e5-4402-8ed2-0c36d5ba1bb1",
+"Key": "J",
+"Ctrl": true,
+"Alt": false,
+"Shift": true,
+"Win": false,
+"Command": "Навигация\\НавигацияПоМетаданным::ПерейтиКОбъектуМетаданных",
+"App": "1cv8.exe",
+"Comment": ""
 }
 ]
