@@ -304,5 +304,11 @@ namespace HotkeyWin
             Close();
         }
 
+        private void trayMenu_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.BringToFront();
+            this.WindowState = FormWindowState.Normal;
+        }
     }
 }

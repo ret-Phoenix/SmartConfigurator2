@@ -38,6 +38,7 @@
             this.listViewHotkeys = new System.Windows.Forms.ListView();
             this.Action = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Hotkey = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.App = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
@@ -47,7 +48,6 @@
             this.btnUp = new System.Windows.Forms.ToolStripButton();
             this.btnDown = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.App = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.trayMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -68,7 +68,8 @@
             this.menuItemShowSettings,
             this.menuItemCloseApp});
             this.trayMenu.Name = "trayMenu";
-            this.trayMenu.Size = new System.Drawing.Size(194, 48);
+            this.trayMenu.Size = new System.Drawing.Size(194, 70);
+            this.trayMenu.Click += new System.EventHandler(this.trayMenu_Click);
             // 
             // menuItemShowSettings
             // 
@@ -122,6 +123,11 @@
             // 
             this.Hotkey.Text = "Хоткей";
             this.Hotkey.Width = 180;
+            // 
+            // App
+            // 
+            this.App.Text = "App";
+            this.App.Width = 180;
             // 
             // toolStrip1
             // 
@@ -213,11 +219,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(758, 506);
             this.tabControl1.TabIndex = 0;
-            // 
-            // App
-            // 
-            this.App.Text = "App";
-            this.App.Width = 180;
             // 
             // Form1
             // 

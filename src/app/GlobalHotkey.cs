@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace Hotkeys
 {
@@ -36,7 +37,8 @@ namespace Hotkeys
 
         public override int GetHashCode()
         {
-            return modifier ^ key ^ hWnd.ToInt32();
+            var commandSum = command.Select(x => (int)x).Sum();
+            return commandSum ^ modifier ^ key ^ hWnd.ToInt32();
         }
 
         public int ID()

@@ -267,6 +267,17 @@
 "Comment": ""
 },
 {
+"Id": "c661c147-d7c6-4060-ac25-67fce8b823a3",
+"Key": "J",
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Command": "Навигация\\НавигацияПоМетаданным::НавигацияПоВходящимВОбъектТипам",
+"App": "1cv8.exe",
+"Comment": ""
+},
+{
 "Id": "32c58d04-32e5-4402-8ed2-0c36d5ba1bb1",
 "Key": "J",
 "Ctrl": true,
@@ -274,6 +285,17 @@
 "Shift": true,
 "Win": false,
 "Command": "Навигация\\НавигацияПоМетаданным::ПерейтиКОбъектуМетаданных",
+"App": "1cv8.exe",
+"Comment": ""
+},
+{
+"Id": "434dcf46-16b9-4d7f-a262-4d4da6a685c8",
+"Key": "J",
+"Ctrl": true,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Command": "Навигация\\НавигацияПоМетаданным::НавигацияПоСсылкамНаОбъект",
 "App": "1cv8.exe",
 "Comment": ""
 }
