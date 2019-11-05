@@ -298,5 +298,27 @@
 "Command": "Навигация\\НавигацияПоМетаданным::НавигацияПоСсылкамНаОбъект",
 "App": "1cv8.exe",
 "Comment": ""
+},
+{
+"Id": "eb860c07-a098-4176-9579-41aaef917f7b",
+"Key": "B",
+"Ctrl": false,
+"Alt": true,
+"Shift": true,
+"Win": false,
+"Command": "РаботаСТекстом::ПреобразоватьВИдентификатор",
+"App": "1cv8.exe",
+"Comment": ""
+},
+{
+"Id": "295bb89e-39db-4e6c-9c1f-7d11eda7dadd",
+"Key": "D",
+"Ctrl": true,
+"Alt": false,
+"Shift": false,
+"Win": false,
+"Command": "РаботаСТекстом::ДублироватьСтрокуБлок",
+"App": "1cv8.exe",
+"Comment": ""
 }
 ]
