@@ -320,5 +320,27 @@
 "Command": "РаботаСТекстом::ДублироватьСтрокуБлок",
 "App": "1cv8.exe",
 "Comment": ""
+},
+{
+"Id": "a540eeff-b0b8-4a7b-a0fb-feae23586bf9",
+"Key": "OemOpenBrackets",
+"Ctrl": false,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Command": "РаботаСТекстом::ВвестиОткрывающуюКвадратнуюСкобку",
+"App": "1cv8.exe",
+"Comment": ""
+},
+{
+"Id": "34d17baf-1660-48bd-b271-88b7322ea72c",
+"Key": "OemCloseBrackets",
+"Ctrl": false,
+"Alt": true,
+"Shift": false,
+"Win": false,
+"Command": "РаботаСТекстом::ВвестиЗакрывающуюКвадратнуюСкобку",
+"App": "1cv8.exe",
+"Comment": ""
 }
 ]
