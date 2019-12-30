@@ -307,7 +307,7 @@
 "Shift": true,
 "Win": false,
 "Command": "РаботаСТекстом::ПреобразоватьВИдентификатор",
-"App": "1cv8.exe",
+"App": "1cv8.exe,1cedt.exe",
 "Comment": ""
 },
 {
