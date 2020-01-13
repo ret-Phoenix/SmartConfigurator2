@@ -161,7 +161,7 @@ namespace HotkeyWin
 
         private void RegisterShortKeys()
         {
-            string currentAppName = ModuleName();
+            string currentAppName = ModuleName().ToLower();
 
             foreach (var CurSK in CurrentShortKeys)
             {

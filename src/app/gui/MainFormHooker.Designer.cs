@@ -58,7 +58,7 @@
             // 
             this.notifyIconApp.ContextMenuStrip = this.trayMenu;
             this.notifyIconApp.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconApp.Icon")));
-            this.notifyIconApp.Text = "notifyIconApp";
+            this.notifyIconApp.Text = "SmartConfigurator2";
             this.notifyIconApp.Visible = true;
             this.notifyIconApp.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
@@ -68,7 +68,7 @@
             this.menuItemShowSettings,
             this.menuItemCloseApp});
             this.trayMenu.Name = "trayMenu";
-            this.trayMenu.Size = new System.Drawing.Size(194, 70);
+            this.trayMenu.Size = new System.Drawing.Size(194, 48);
             this.trayMenu.Click += new System.EventHandler(this.trayMenu_Click);
             // 
             // menuItemShowSettings
@@ -106,6 +106,7 @@
             this.listViewHotkeys.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewHotkeys.FullRowSelect = true;
             this.listViewHotkeys.GridLines = true;
+            this.listViewHotkeys.HideSelection = false;
             this.listViewHotkeys.Location = new System.Drawing.Point(3, 28);
             this.listViewHotkeys.Name = "listViewHotkeys";
             this.listViewHotkeys.Size = new System.Drawing.Size(744, 449);
