@@ -16,6 +16,7 @@ namespace HotkeyWin
     {
         private List<Hotkeys.GlobalHotkey> CurrentShortKeys;
         private List<string> SupportedIDENames;
+        private const int MAXTITLE = 255;
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
@@ -34,7 +35,25 @@ namespace HotkeyWin
 
         delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime);
 
-        WinEventDelegate dele = null;
+        struct WindowInfo
+        {
+            public string ModuleName;
+            public string Title;
+            public string ClassName;
+        }
+
+        #region DLLImport
+
+        [DllImport("user32.dll", EntryPoint = "GetWindowText", ExactSpelling = false, CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern int _GetWindowText(IntPtr hWnd, StringBuilder lpWindowText, int nMaxCount);
+
+
+        // GetClassName
+        [DllImport("user32.dll", EntryPoint = "GetClassName", ExactSpelling = false, CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern int _GetClassName(IntPtr hwnd, StringBuilder lpClassName, int nMaxCount);
+        #endregion
+
+        WinEventDelegate winDelegate = null;
         public Form1()
         {
             InitializeComponent();
@@ -42,9 +61,35 @@ namespace HotkeyWin
             SupportedIDEList();
             CurrentShortKeys = new List<GlobalHotkey>();
 
-            dele = new WinEventDelegate(WinEventProc);
-            IntPtr m_hhook = SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, dele, 0, 0, WINEVENT_OUTOFCONTEXT);
+            winDelegate = new WinEventDelegate(WinEventProc);
+            IntPtr m_hhook = SetWinEventHook(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND, IntPtr.Zero, winDelegate, 0, 0, WINEVENT_OUTOFCONTEXT);
         }
+
+        #region GetWindowText/ClassName
+
+        
+
+        /// <summary>
+        /// Returns the caption of a window by given HWND identifier.
+        /// </summary>
+        public static string GetWindowText(IntPtr hWnd)
+        {
+            StringBuilder title = new StringBuilder(MAXTITLE);
+            int titleLength = _GetWindowText(hWnd, title, title.Capacity + 1);
+            title.Length = titleLength;
+
+            return title.ToString();
+        }
+
+        public static string GetClassName(IntPtr hWnd)
+        {
+            StringBuilder title = new StringBuilder(MAXTITLE);
+            int titleLength = _GetClassName(hWnd, title, title.Capacity + 1);
+            title.Length = titleLength;
+
+            return title.ToString();
+        }
+        #endregion
 
         private void SupportedIDEList()
         {
@@ -61,8 +106,8 @@ namespace HotkeyWin
 
         private void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
-            string currentAppName = ModuleName();
-            if (SupportedIDENames.Contains(currentAppName))
+            WindowInfo winInfo = WinInfo();
+            if (SupportedIDENames.Contains(winInfo.ModuleName))
             {
                 RegisterShortKeys();
             }
@@ -71,7 +116,6 @@ namespace HotkeyWin
                 UnregisterShortKeys();
             }
         }
-
 
         private void HandleHotkey()
         {
@@ -90,9 +134,15 @@ namespace HotkeyWin
             }
         }
 
-        private string ModuleName()
+        private WindowInfo WinInfo()
         {
+            var winInfo = new WindowInfo();
+
             IntPtr hWnd = GetForegroundWindow();
+            
+            winInfo.Title = GetWindowText(hWnd);
+            winInfo.ClassName = GetClassName(hWnd);
+
             uint procId = 0;
             GetWindowThreadProcessId(hWnd, out procId);
             if (procId != 0)
@@ -101,15 +151,15 @@ namespace HotkeyWin
                 try
                 {
                     var proc = Process.GetProcessById((int)procId);
-                    return proc.MainModule.ModuleName;
+                    winInfo.ModuleName = proc.MainModule.ModuleName;
                 }
                 catch (Exception)
                 {
-                    return "";
+                    return winInfo;
                 }
             }
 
-            return "";
+            return winInfo;
         }
 
         protected override void WndProc(ref Message m)
@@ -151,8 +201,6 @@ namespace HotkeyWin
 
         private void UnregisterShortKeys()
         {
-            string currentAppName = ModuleName();
-
             foreach (Hotkeys.GlobalHotkey CurSK in CurrentShortKeys)
             {
                 CurSK.Unregiser();
@@ -161,7 +209,7 @@ namespace HotkeyWin
 
         private void RegisterShortKeys()
         {
-            string currentAppName = ModuleName().ToLower();
+            string currentAppName = WinInfo().ModuleName.ToLower();
 
             foreach (var CurSK in CurrentShortKeys)
             {

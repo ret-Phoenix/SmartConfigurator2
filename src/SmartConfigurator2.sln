@@ -1,20 +1,56 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartConfigurator2", "app\SmartConfigurator2.csproj", "{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onescript-extensions", "..\..\onescript-extensions\onescript-extensions\onescript-extensions\onescript-extensions.csproj", "{0CEB0C02-30C3-4305-8E6D-9C612971167E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oscript-simple-gui", "..\..\oscript-simple-gui\oscript-component\oscript-simple-gui.csproj", "{EA173D06-CCD2-45D5-A263-DC866289517A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinExt", "..\..\WinExt\WinExt\WinExt.csproj", "{983704C0-45E0-492B-9C08-AB88FD659CF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Debug|Any CPU.Build.0 = Debug|x86
 		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Debug|x86.ActiveCfg = Debug|x86
 		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Debug|x86.Build.0 = Debug|x86
+		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Release|Any CPU.ActiveCfg = Release|x86
+		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Release|Any CPU.Build.0 = Release|x86
 		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Release|x86.ActiveCfg = Release|x86
 		{C1134226-4C8F-4AF1-BBA8-7D749CE3F817}.Release|x86.Build.0 = Release|x86
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0CEB0C02-30C3-4305-8E6D-9C612971167E}.Release|x86.Build.0 = Release|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA173D06-CCD2-45D5-A263-DC866289517A}.Release|x86.Build.0 = Release|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Debug|x86.Build.0 = Debug|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Release|x86.ActiveCfg = Release|Any CPU
+		{983704C0-45E0-492B-9C08-AB88FD659CF0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

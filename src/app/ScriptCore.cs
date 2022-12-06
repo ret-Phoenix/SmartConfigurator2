@@ -65,5 +65,10 @@ namespace HotkeyWin
         {
             Echo(exc.ToString());
         }
+
+        public bool InputString(out string result, string prompt, int maxLen, bool multiline)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

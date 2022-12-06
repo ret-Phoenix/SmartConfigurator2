@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HotkeyWin</RootNamespace>
     <AssemblyName>SmartConfigurator</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -58,17 +58,21 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomMarshalers" />
     <Reference Include="DotNetZip, Version=1.13.3.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetZip.1.13.3\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="ScriptEngine, Version=1.1.1.42, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OneScript.1.1.1\lib\net452\ScriptEngine.dll</HintPath>
+    <Reference Include="OneScript.Language, Version=1.7.0.214, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OneScript.Language.1.7.0\lib\net452\OneScript.Language.dll</HintPath>
     </Reference>
-    <Reference Include="ScriptEngine.HostedScript, Version=1.1.1.42, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OneScript.StandardLibrary.1.1.1\lib\net452\ScriptEngine.HostedScript.dll</HintPath>
+    <Reference Include="ScriptEngine, Version=1.7.0.214, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OneScript.1.7.0\lib\net452\ScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptEngine.HostedScript, Version=1.7.0.214, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OneScript.StandardLibrary.1.7.0\lib\net452\ScriptEngine.HostedScript.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
