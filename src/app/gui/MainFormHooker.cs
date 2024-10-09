@@ -100,27 +100,30 @@ namespace HotkeyWin
             foreach (var fileName in files)
             {
                 string IDEName = Path.GetFileNameWithoutExtension(fileName);
-                SupportedIDENames.Add(IDEName);
+                SupportedIDENames.Add(IDEName.ToLower());
             }
         }
 
         private void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint dwEventThread, uint dwmsEventTime)
         {
             WindowInfo winInfo = WinInfo();
-            if (SupportedIDENames.Contains(winInfo.ModuleName))
+            Echo("WinEventProc. Title - " + winInfo.Title + ". ClassName - " + winInfo.ClassName + "/ ModuleName - " + winInfo.ModuleName);
+            if (SupportedIDENames.Contains(winInfo.ModuleName.ToLower()))
             {
+                Echo("Supported IDE - " + winInfo.ModuleName.ToLower());
                 RegisterShortKeys();
             }
             else
             {
+                Echo("Unsupported IDE - " + winInfo.ModuleName.ToLower());
                 UnregisterShortKeys();
             }
         }
 
-        private void HandleHotkey()
-        {
-            WriteLine("Hotkey pressed!");
-        }
+        // private void HandleHotkey()
+        // {
+        //     WriteLine("Hotkey pressed!");
+        // }
 
         private void RunScriptAction(int id)
         {
@@ -357,6 +360,16 @@ namespace HotkeyWin
             this.Show();
             this.BringToFront();
             this.WindowState = FormWindowState.Normal;
+        }
+
+        public void Echo(string str)
+        {
+            DateTime curDate = DateTime.Now;
+            Console.WriteLine(curDate + ": " + str);
+
+            StreamWriter myfile = new StreamWriter("SmartConfigurator2.log", true);
+            myfile.WriteLine(curDate + ": " + str);
+            myfile.Close();
         }
     }
 }
